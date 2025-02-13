@@ -1,11 +1,15 @@
-# Scraping configuration
-BASE_URL = "https://www.meetup.com/find/?location=ca--on--Toronto&source=EVENTS"
-WAIT_TIME = 10
-MAX_RETRIES = 3
+# Configuration settings
+BASE_URL = "https://lu.ma/toronto"
 
-# Output configuration
-OUTPUT_FILE = 'event_details.csv'
-LOG_FILE = 'scraper.log'
+# CSV file paths
+EVENT_LINKS_FILE = "data/event_links.csv"
+EVENT_DETAILS_FILE = "data/event_details.csv"
 
-# Browser configuration
-USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+# Selenium settings
+SCROLL_PAUSE_TIME = 2
+MAX_SCROLLS = 5
+PAGE_LOAD_WAIT = 5
+
+# CSV Headers
+LINK_HEADERS = ['title', 'link']
+DETAIL_HEADERS = ['Event Link', 'title', 'date', 'location', 'price', 'description'] 
